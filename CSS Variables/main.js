@@ -1,4 +1,5 @@
 const inputs = document.querySelectorAll('.controls input');
+const color_input = document.querySelector('#color');
 
 function handleUpdate() {
     const suffix = this.dataset.sizing || '';
@@ -6,4 +7,3 @@ function handleUpdate() {
 }
 
 inputs.forEach(input => input.addEventListener('change', handleUpdate));
-inputs.forEach(input => input.addEventListener('mouseover', handleUpdate));

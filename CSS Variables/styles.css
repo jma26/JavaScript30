@@ -1,16 +1,37 @@
 * {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
     margin: 0px;
     padding: 0px;
+}
+
+body {
+    text-align: center;
+}
+
+.controls {
+    margin: 24px 0px;
+    padding: 8px;
+}
+
+label {
+    font-size: 24px;
+}
+
+input {
+    width: 100px;
 }
 
 :root {
     --base-color: #FFa500;
     --spacing: 20px;
-    --blur: 20px;
+    --blur: 0px;
 }
 
 img {
-    padding: var(--spacing);
     background: var(--base-color);
+    display: block;
     filter: blur(var(--blur));
+    margin: 0 auto;
+    padding: var(--spacing);
 }
