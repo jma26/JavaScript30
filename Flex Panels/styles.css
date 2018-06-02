@@ -1,0 +1,47 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.panel {
+    border: 2px solid white;
+    color: white;
+    font-size: 1.5em;
+}
+
+.panel1 {
+    background-image: url("./imgs/Kento_Momota.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.panel2 {
+    background-image: url("./imgs/Lin_Dan.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.panel3 {
+    background-image: url("./imgs/Shi_yuqi.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.panel4 {
+    background-image: url("./imgs/Lee_Chong_Wei.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.panel5 {
+    background-image: url("./imgs/Viktor_Axelsen.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.panel6 {
+    background-image: url("./imgs/Hans_Vittinghus.jpg");
+    background-position: center;
+    background-size: cover;
+}
