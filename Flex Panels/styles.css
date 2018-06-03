@@ -22,6 +22,11 @@
     width: 100%;
 }
 
+.panel > * {
+    margin-top: 8px;
+    font-size: 1.5em;
+}
+
 .panel1 {
     background-image: url("./imgs/Kento_Momota.jpg");
     background-position: center;
