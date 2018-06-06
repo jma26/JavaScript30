@@ -36,9 +36,8 @@ const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick
 // Array.prototype.map()
 // 2. Give us an array of the inventors' first and last names
 (function inventorsLastName() {
-    let lastnames = [];
-    inventors.map((inventor) => {
-        lastnames.push(inventor.last);
+    let fullnames = inventors.map((inventor) => {
+        return `${inventor.first} ${inventor.last}`;
     })
-    console.log(lastnames);
+    console.log(fullnames);
 })();
