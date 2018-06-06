@@ -37,3 +37,39 @@ const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick
     })
     console.table(fullnames);
 })();
+
+// Array.prototype.sort()
+// 3. Sort the inventors by birthdate, oldest to youngest
+(function birthdateSort() {
+    let birthdaySort = inventors.sort((a, b) => {
+        if (a.year > b.year) {
+            return 1;
+        } else {
+            return -1;
+        }
+    });
+    console.table(birthdaySort);
+})();
+
+// Array.prototype.reduce()
+// 4. How many years did all the inventors live?
+(function totalYearsAlive() {
+    let sum = inventors.reduce((accumulator, currentValue) => {
+        return accumulator + (currentValue.passed - currentValue.year);
+    }, 0);
+    console.log(`${sum} total years lived by all inventors`);
+})();
+
+// 5. Sort the inventors by years lived
+(function yearsAlive() {
+    let oldest = inventors.sort((a, b) => {
+        const lastGuy = a.passed - a.year;
+        const nextGuy = b.passed - b.year;
+        if (lastGuy > nextGuy) {
+            return -1;
+        } else {
+            return 1;
+        }
+    });
+    console.table(oldest);
+})();
