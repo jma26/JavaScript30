@@ -16,21 +16,17 @@ const inventors = [
 const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick', 'Beecher, Henry', 'Beethoven, Ludwig', 'Begin, Menachem', 'Belloc, Hilaire', 'Bellow, Saul', 'Benchley, Robert', 'Benenson, Peter', 'Ben-Gurion, David', 'Benjamin, Walter', 'Benn, Tony', 'Bennington, Chester', 'Benson, Leana', 'Bent, Silas', 'Bentsen, Lloyd', 'Berger, Ric', 'Bergman, Ingmar', 'Berio, Luciano', 'Berle, Milton', 'Berlin, Irving', 'Berne, Eric', 'Bernhard, Sandra', 'Berra, Yogi', 'Berry, Halle', 'Berry, Wendell', 'Bethea, Erin', 'Bevan, Aneurin', 'Bevel, Ken', 'Biden, Joseph', 'Bierce, Ambrose', 'Biko, Steve', 'Billings, Josh', 'Biondo, Frank', 'Birrell, Augustine', 'Black, Elk', 'Blair, Robert', 'Blair, Tony', 'Blake, William'];
 
 // Array.prototype.filter()
-// 1. Filter the list of inventors for those who were born in the 1950s
+// 1. Filter the list of inventors for those who were born in the 1500s
 (function inventorsIn1950s() {
     let count = 0;
-    inventors.filter((inventor) => {
-        if ((inventor.year >= 1950 && inventor.year <= 1959) === false) {
-            count++;
+    let Bornin1950s = inventors.filter((inventor) => {
+        if ((inventor.year >= 1500 && inventor.year < 1600)) {
+            return true;
         } else {
-            console.log(`${inventor} were born in the 1950s`);
-        }    
-    })
-    if (count === 1) {
-        console.log(`${count} inventor was not born in the 1950s`);
-    } else {
-        console.log(`${count} inventors were not born in the 1950s`);
-    }
+            return false;
+        }
+    });
+    console.table(Bornin1950s);
 })();
 
 // Array.prototype.map()
@@ -39,5 +35,5 @@ const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick
     let fullnames = inventors.map((inventor) => {
         return `${inventor.first} ${inventor.last}`;
     })
-    console.log(fullnames);
+    console.table(fullnames);
 })();
