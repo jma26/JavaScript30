@@ -86,3 +86,33 @@ const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick
     });
     console.table(de);
 })();
+
+// 7. sort Exercise
+// Sort the people alphabetically by last name
+(function sortingPeople() {
+    let peopleSort = people.sort((lastOne, nextOne) => {
+        let [alast, afirst] = lastOne.split(', ');
+        let [blast, bfirst] = nextOne.split(', ');
+        if (alast > blast) {
+            return 1;
+        } else {
+            return -1;
+        }
+    })
+    console.table(peopleSort);
+})();
+
+// 8. Reduce Exercise
+// Sum up the instances of each of these
+const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+
+(function sumOfInstances() {
+    let instanceSum = data.reduce((vehicles, currentVehicle) => {
+        if (!vehicles[currentVehicle]) {
+            vehicles[currentVehicle] = 0;
+        }
+        vehicles[currentVehicle]++;
+        return vehicles;
+    }, {} );
+    console.table(instanceSum);
+})();
