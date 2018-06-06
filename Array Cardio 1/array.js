@@ -73,3 +73,16 @@ const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick
     });
     console.table(oldest);
 })();
+
+// 6. Create a list of Boulevards in Paris that contain 'de' anywhere in the name
+// https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+(function deLinks() {
+    let category = document.querySelector('.mw-category');
+    let links = Array.from(category.querySelectorAll('a'));
+    let de = links.map(link => {
+        link.textContent
+    }).filter(streetname => {
+        streetname.includes('de');
+    });
+    console.table(de);
+})();
