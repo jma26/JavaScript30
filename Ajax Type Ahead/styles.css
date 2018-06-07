@@ -1,0 +1,27 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.search-form, .results {
+    box-sizing: content-box;
+    padding: 16px;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.search-form {
+    border: 2px solid gray;
+    border-radius: 16px;
+    margin-top: 48px;
+}
+
+.results {
+    list-style-type: none;
+}
+
+.search-box {
+    width: 100%;
+}
