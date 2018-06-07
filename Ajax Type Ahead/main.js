@@ -10,7 +10,8 @@ fetch(endpoint)
     data.push(...jsonData);
 });
 
-let searchInput = document.querySelector('.search-box');
+const searchInput = document.querySelector('.search-box');
+const resultsHTML = document.querySelector('.results');
 
 // Get input value of search-box
 function getMatches(searchWord, data) {
@@ -25,6 +26,13 @@ function getMatches(searchWord, data) {
 function displayData() {
     let results = getMatches(this.value, data);
     console.log(results);
+    let html = results.map((result) => {
+        return `<li class="matchResults">
+        <p class="name"> ${result.city}, ${result.state} </p>
+        <p class="population"> ${result.population} </p>
+        <p class="rank"> Ranking: ${result.rank} </p> </li>`;
+    }).join('');
+    resultsHTML.innerHTML = html;
 }
 
 searchInput.addEventListener('keyup', displayData);
