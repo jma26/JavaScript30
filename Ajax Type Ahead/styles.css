@@ -25,3 +25,9 @@
 .search-box {
     width: 100%;
 }
+
+.matchResults {
+    border: 2px solid gray;
+    margin-top: 16px;
+    padding: 16px;
+}
