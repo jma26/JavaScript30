@@ -25,10 +25,12 @@ function getMatches(searchWord, data) {
 // Display data
 function displayData() {
     let results = getMatches(this.value, data);
-    console.log(results);
     let html = results.map((result) => {
+        let regex = new RegExp(this.value, 'gi');
+        let cityName = result.city.replace(regex, `<span class="highlight">${this.value}</span>`);
+        let stateName = result.state.replace(regex, `<span class="highlight">${this.value}</span>`);
         return `<li class="matchResults">
-        <p class="name"> ${result.city}, ${result.state} </p>
+        <p class="name"> ${cityName}, ${stateName} </p>
         <p class="population"> ${result.population} </p>
         <p class="rank"> Ranking: ${result.rank} </p> </li>`;
     }).join('');

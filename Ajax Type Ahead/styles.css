@@ -36,3 +36,7 @@ body {
     margin-top: 16px;
     padding: 16px;
 }
+
+.highlight {
+    background-color: #FFFFCC;
+}
