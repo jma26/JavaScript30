@@ -13,14 +13,18 @@ fetch(endpoint)
 let searchInput = document.querySelector('.search-box');
 
 // Get input value of search-box
-function getValue() {
-    displayData(this.value, data);
+function getMatches(searchWord, data) {
+    return data.filter((result) => {
+         // Regular Expression set up
+        let searchFilter = new RegExp(searchWord, 'gi');
+        return result.city.match(searchFilter) || result.state.match(searchFilter);
+    })
 }
 
 // Display data
-function displayData(searchWord, data) {
-    // Filter out the data with searchWord
-    let searchFilter = new RegExp(searchWord, 'gi');
+function displayData() {
+    let results = getMatches(this.value, data);
+    console.log(results);
 }
 
-searchInput.addEventListener('keyup', getValue);
+searchInput.addEventListener('keyup', displayData);
