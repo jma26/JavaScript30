@@ -24,3 +24,9 @@ const comments = [
         }
     });
 })();
+
+// Array.prototype.every() Is everyone 19 or older?
+const allOver19 = people.every(function(person) {
+    return new Date().getFullYear() - person.year >= 19;
+});
+console.log(allOver19);
