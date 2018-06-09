@@ -30,3 +30,11 @@ const allOver19 = people.every(function(person) {
     return new Date().getFullYear() - person.year >= 19;
 });
 console.log(allOver19);
+
+// Array.prototype.find()
+// Find is like filter, but instead returns just the one you are looking for
+// Find the comment with the ID of 823423
+const findMe = comments.find(function(comment) {
+    return comment.id === 823423;
+})
+console.log(findMe);
