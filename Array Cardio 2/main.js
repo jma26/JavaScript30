@@ -36,5 +36,14 @@ console.log(allOver19);
 // Find the comment with the ID of 823423
 const findMe = comments.find(function(comment) {
     return comment.id === 823423;
-})
+});
 console.log(findMe);
+
+// Array.prototype.findIndex()
+// Find the comment with this ID
+// Delete the comment with the ID of 823423
+const findIndex = comments.findIndex(function(comment) {
+    return comment.id === 823423;
+});
+comments.splice(findIndex, 1);
+console.log(comments);
