@@ -21,12 +21,24 @@ function skip() {
     video.currentTime += parseFloat(this.dataset.skip);
 }
 
+function handleRangeUpdate() {
+    video[this.name] = this.value;
+    console.log(this.value);
+    console.log(this.name);
+}
+
 video.addEventListener('click', togglePlay);
 video.addEventListener('play', updateButton);
 video.addEventListener('pause', updateButton);
 toggle.addEventListener('click', togglePlay);
 
-console.log(skipButtons);
 skipButtons.forEach(function(button) {
     button.addEventListener('click', skip);
+})
+
+ranges.forEach(function(range) {
+    range.addEventListener('change', handleRangeUpdate);
+})
+ranges.forEach(function(range) {
+    range.addEventListener('mousemove', handleRangeUpdate);
 })
