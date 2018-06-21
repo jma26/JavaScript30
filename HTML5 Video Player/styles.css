@@ -2,3 +2,48 @@
     margin: 0px;
     padding: 0px;
 }
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #8D76AD;
+    align-items: center;
+}
+
+.headline {
+    color: #F3EEF3;
+    text-align: center;
+}
+
+.player {
+    max-width: 100%;
+}
+
+.toggle {
+    width: 50px;
+}
+
+.skippers {
+    padding: 8px;
+}
+
+.progress {
+    display: flex;
+    flex-basis: 100%;
+    height: 8px;
+    padding: 16px;
+}
+
+.progress-filled {
+    width: 100%;
+    background-color: black;
+    border: 2px solid black;
+}
+
+.video-controls {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #98BD35;
+    padding: 16px;
+}
