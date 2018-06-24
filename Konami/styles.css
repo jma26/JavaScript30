@@ -2,3 +2,8 @@
     margin: 0px;
     padding: 0px;
 }
+
+.headline {
+    text-align: center;
+    padding: 18px 0px;
+}
