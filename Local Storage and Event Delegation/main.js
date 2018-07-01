@@ -1,7 +1,7 @@
 const foodForm = document.querySelector('.food-form');
 const foodValue = document.querySelector('input[name="item"]');
 const itemHTML = document.querySelector('.item-list');
-const foodList = [];
+const foodList = JSON.parse(localStorage.getItem('foodList')) || [];
 
 function addToList(event) {
     event.preventDefault();
@@ -10,8 +10,11 @@ function addToList(event) {
         done: false
     };
     foodList.push(food);
-    console.log(foodList);
     populateList(foodList);
+    // Local Storage
+    localStorage.setItem('foodList', JSON.stringify(foodList));
+    // Reset form values
+    this.reset();
 }
 
 function populateList(foods) {
@@ -26,4 +29,17 @@ function populateList(foods) {
     })
 }
 
+function toggleDone(event) {
+    if (!event.target.matches('input')) return;
+    const el = event.target;
+    const index = el.dataset.index;
+    foodList[index].done = !foodList[index].done;
+    // Local Storage
+    localStorage.setItem('foodList', JSON.stringify(foodList));
+    populateList(foodList);
+}
+
+populateList(foodList);
+
 foodForm.addEventListener('submit', addToList);
+itemHTML.addEventListener('click', toggleDone);
