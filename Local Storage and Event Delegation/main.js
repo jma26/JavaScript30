@@ -1,11 +1,16 @@
 const foodForm = document.querySelector('.food-form');
 const foodValue = document.querySelector('input[name="item"]');
-const itemHTML = document.querySelector('.list-container');
+const itemHTML = document.querySelector('.item-list');
 const foodList = [];
 
 function addToList(event) {
     event.preventDefault();
-    foodList.push(foodValue.value);
+    const food = {
+        text: foodValue.value,
+        done: false
+    };
+    foodList.push(food);
+    console.log(foodList);
     populateList(foodList);
 }
 
@@ -13,9 +18,11 @@ function populateList(foods) {
     itemHTML.innerHTML = '';
     foods.map(function(food, index) {
         itemHTML.innerHTML += `
-            <ul class="item-list"> 
-                <li> ${food} </li>
-            </ul>`
+            <li class="item">
+                <input type="checkbox" data-index=${index} id="item${index}" ${food.done ? 'checked' : ''}>
+                <label for="item${index}"> ${food.text} </label> 
+            </li>
+                `
     })
 }
 
