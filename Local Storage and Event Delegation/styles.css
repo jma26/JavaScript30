@@ -44,7 +44,7 @@ input[type=submit] {
 
 .item-list {
     list-style: none;
-    padding: 16px;
+    padding: 0px 0px 4px 16px;
 }
 
 .item {
