@@ -1,11 +1,35 @@
 * {
+    box-sizing: border-box;
+    font-family: sans-serif;
     margin: 0px;
     padding: 0px;
 }
 
-html {
-    background-image: url('./img/ramen-background.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
+body {
+    background: url('./img/ramen-background.jpg') no-repeat;
+    background-position: 50% 85%;
     background-size: cover;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+input {
+    border-radius: 4px;
+    margin-top: 8px;
+    padding: 4px;
+}
+
+.container {
+    margin: 0 auto;
+    text-align: center;
+    width: 500px;
+}
+
+.headline {
+    color: #FFFFFF;
+    margin-top: 64px;
+}
+
+input[type=submit] {
+    background-color: #ECF9FF;
 }
