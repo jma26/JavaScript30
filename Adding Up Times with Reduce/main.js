@@ -18,7 +18,6 @@ const mins = Math.floor(secondsLeft / 60);
 // Get seconds
 secondsLeft = secondsLeft % 60;
 
-console.log(hours, mins, secondsLeft);
-
+console.log(`Total video time from videos ---> ${hours}:${mins}:${secondsLeft}`);
 
 
